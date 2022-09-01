@@ -3,11 +3,26 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@/enums/*": [
+        "src/enums/*"
+      ],
+      "@/config": [
+        "./config"
+      ],
       "@/ui/*": [
-        "ui/*"
+        "src/ui/*"
       ],
       "@/components/*": [
-        "ui/components/*"
+        "src/ui/components/*"
+      ],
+      "@/apis/*": [
+        "src/apis/*"
+      ],
+      "@/types": [
+        "src/types"
+      ],
+      "@/lib/*": [
+        "src/lib/*"
       ]
     },
     "target": "es5",

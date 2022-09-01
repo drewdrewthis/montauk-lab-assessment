@@ -1,0 +1,22 @@
+export type AirportsApiReturnType = {
+  code: string;
+  lat: string;
+  lon: string;
+  name: string;
+  city: string;
+  state: string;
+  country: string;
+  woeid: string;
+  tz: string;
+  phone: string;
+  type: string;
+  email: string;
+  url: string;
+  runway_length: string;
+  elev: string;
+  icao: string;
+  direct_flights: string;
+  carriers: string;
+};
+
+export type PointOnEarth = [latitude: string, longitude: string];
