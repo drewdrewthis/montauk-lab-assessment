@@ -2,7 +2,6 @@ import { PointOnEarth } from "../types";
 
 const DistanceCalculator = {
   calculate(pointA: PointOnEarth, pointB: PointOnEarth) {
-    console.log(arguments);
     return distance(
       Number(pointA[0]),
       Number(pointB[0]),

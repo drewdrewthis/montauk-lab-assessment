@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import AirportDistanceForm from "@/ui/forms/AirportDistanceForm";
 
@@ -12,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
+      <main className={styles.main + " xs:p-0 md:p-10"}>
         <h1 className={styles.title}>Montauk Labs Assessment</h1>
 
         <p className={styles.description}>

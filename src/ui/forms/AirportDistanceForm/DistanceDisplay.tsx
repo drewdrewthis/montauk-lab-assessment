@@ -7,7 +7,7 @@ interface Props {
 export default function DistanceDisplay(props: Props) {
   const { distance } = props;
   return (
-    <Typography className="w-full text-center truncate" variant="h3">
+    <Typography className="w-full text-center truncate h-16" variant="h4">
       {formatDistance(distance)}
     </Typography>
   );
@@ -15,5 +15,5 @@ export default function DistanceDisplay(props: Props) {
 
 function formatDistance(distance: number) {
   if (!distance) return "";
-  return distance + "km";
+  return distance.toFixed(2) + "km";
 }

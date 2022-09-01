@@ -11,29 +11,37 @@ export default function AirportDistanceForm() {
     useController();
 
   return (
-    <form className="w-full">
-      <div className={cx(styles.container, "gap-4 mb-5 w-full")}>
+    <form className="max-w-xl w-full">
+      <div className={cx(styles.container, "gap-4 mb-4 w-full")}>
         <Autocomplete
-          className="w-1/3"
+          className="flex-1"
           control={control}
           isOptionEqualToValue={isOptionEqualToValue}
           label="Departure Airport"
           name="departureAirport"
           options={options}
+          sx={{ minWidth: 150 }}
         />
         <Autocomplete
-          className="w-1/3"
+          className="flex-1"
           control={control}
           fullWidth
           isOptionEqualToValue={isOptionEqualToValue}
           label="Arrival Airport"
           name="arrivalAirport"
           options={options}
+          sx={{ minWidth: 150 }}
         />
       </div>
-      {error && <Alert severity="error">{error.message}</Alert>}
-      {<LoadingInfo className={cx(!loading && "invisible")} />}
-      <DistanceDisplay distance={distance} />
+      <div className={styles.info}>
+        {!loading && error && (
+          <Alert severity="error" className="max-w-sm mx-auto">
+            {error.message}
+          </Alert>
+        )}
+        {loading && <LoadingInfo />}
+        {!loading && <DistanceDisplay distance={distance} />}
+      </div>
     </form>
   );
 }
